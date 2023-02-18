@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Klakulator VAT</title>
 </head>
 <body>
-
+  <h1>Kalkulator VAT</h1>
+  <form action="/calculate" method="post">
+      <div>
+          <label>
+              Kwota Netto:
+              <input type="number" name="nettoPrice" step=".01">
+          </label>
+      </div>
+      <div>
+          <label>
+              Kategoria:
+              <select name="category" >
+                  <option value="service">Usługi</option>
+                  <option value="food">Jedzenie</option>
+                  <option value="other">Inne</option>
+              </select>
+          </label>
+      </div>
+      <button type="submit">Oblicz VAT i kwotę brutto</button>
+  </form>
 </body>
 </html>
